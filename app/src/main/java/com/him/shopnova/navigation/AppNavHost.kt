@@ -7,9 +7,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.him.shopnova.ui.screens.auth.Registerscreen
-import com.him.shopnova.ui.screens.auth.Registersreen
+import com.him.shopnova.ui.screens.auth.Registerscreen
 import com.him.shopnova.ui.screens.auth.loginscreen
-import com.him.shopnova.ui.screens.auth.loginsreen
+import com.him.shopnova.ui.screens.auth.loginscreen
 import com.him.shopnova.ui.screens.onboarding.OnboardingScreen1
 import com.him.shopnova.ui.screens.onboarding.OnboardingScreen2
 import com.him.shopnova.ui.screens.onboarding.OnboardingScreen3
@@ -19,7 +19,7 @@ import com.him.shopnova.ui.screens.onboarding.OnboardingScreen3
 fun AppNavHost(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
-    startDestination: String = ROUT_HOME
+    startDestination: String = ROUT_ONBOARDING1
 ) {
 
     NavHost(
