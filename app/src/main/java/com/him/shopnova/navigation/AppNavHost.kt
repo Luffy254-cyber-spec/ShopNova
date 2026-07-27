@@ -6,13 +6,16 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.him.shopnova.navigation.ROUT_DASHBOARD
 import com.him.shopnova.ui.screens.auth.Registerscreen
 import com.him.shopnova.ui.screens.auth.Registerscreen
 import com.him.shopnova.ui.screens.auth.loginscreen
 import com.him.shopnova.ui.screens.auth.loginscreen
+import com.him.shopnova.ui.screens.dashboard.Dashboardscreen
 import com.him.shopnova.ui.screens.onboarding.OnboardingScreen1
 import com.him.shopnova.ui.screens.onboarding.OnboardingScreen2
 import com.him.shopnova.ui.screens.onboarding.OnboardingScreen3
+import com.him.shopnova.ui.screens.splash.SplashScreen
 
 
 @Composable
@@ -45,6 +48,13 @@ fun AppNavHost(
         composable(ROUT_ONBOARDING3) {
             OnboardingScreen3(navController)
         }
+        composable(ROUT_SPLASH) {
+            SplashScreen(navController)
+        }
+        composable(ROUT_DASHBOARD) {
+            Dashboardscreen(navController)
+        }
+
 
 
     }

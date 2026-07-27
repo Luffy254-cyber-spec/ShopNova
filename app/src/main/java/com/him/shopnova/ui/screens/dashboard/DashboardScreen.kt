@@ -1,10 +1,13 @@
-package com.him.shopnova.ui.screens.home
+package com.him.shopnova.ui.screens.dashboard
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AddLocation
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Notifications
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -19,24 +22,20 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Homescreen(navController: NavController){
+fun Dashboardscreen(navController: NavController){
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
-
-
-
         //TopAppBar
         TopAppBar(
-            title = { Text(text = "Home") },
+            title = { Text(text = "Dashboard") },
             navigationIcon = {
                 IconButton(onClick = {}) {
                     Icon(
-                        imageVector = Icons.Default.Menu,
-                        contentDescription = "Menu"
+                        imageVector = Icons.Default.ArrowBack,
+                        contentDescription = "Back"
                     )
                 }
             },
@@ -44,15 +43,15 @@ fun Homescreen(navController: NavController){
             actions ={
                 IconButton(onClick = {}) {
                     Icon(
-                        imageVector = Icons.Default.ShoppingCart,
-                        contentDescription = "Shopping Cart"
+                        imageVector = Icons.Default.Settings,
+                        contentDescription = "Settings"
                     )
                 }
 
                 IconButton(onClick = {}) {
                     Icon(
-                        imageVector = Icons.Default.Notifications,
-                        contentDescription = "Notifications"
+                        imageVector = Icons.Default.AddLocation,
+                        contentDescription = "Location"
                     )
                 }
 
@@ -66,6 +65,7 @@ fun Homescreen(navController: NavController){
         )
         // End of TopAppbar
 
+
     }
 
 
@@ -75,6 +75,6 @@ fun Homescreen(navController: NavController){
 @Preview(showBackground = true)
 @Composable
 
-fun  Homescreenpreview(){
-    Homescreen(rememberNavController())
+fun  Dashboardscreenpreview(){
+    Dashboardscreen(rememberNavController())
 }
